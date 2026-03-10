@@ -1,1 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+<!-- CHANGE TITLE FOR EACH PRESENTATION -->
+<title>Presentation Title</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+
+:root{
+  --bg:#0b1020;
+  --ink:#0f172a;
+  --muted:#64748b;
+  --card:#f6f8fb;
+  --line:#1e5a8a;
+  --accent:#6bbd45;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  background:var(--bg);
+  overflow:hidden;
+}
+
+.stage{
+  width:100vw;
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:36px;
+}
+
+.slide{
+  display:none;
+  width:100%;
+  height:100%;
+}
+
+.slide.active{display:block}
+
+.canvas{
+  width:min(1200px,96vw);
+  height:min(675px,92vh);
+  background:#fff;
+  border-radius:14px;
+  box-shadow:0 22px 70px rgba(0,0,0,.45);
+  position:relative;
+  overflow:hidden;
+}
+
+.brand{
+  position:absolute;
+  top:26px;
+  right:28px;
+}
+
+/* LOGO */
+.brand img{
+  height:42px;
+}
+
+.footer{
+  position:absolute;
+  left:34px;
+  right:34px;
+  bottom:22px;
+  display:flex;
+  justify-content:space-between;
+  font-size:13px;
+  color:rgba(15,23,42,.55);
+}
+
+.pill{
+  padding:6px 10px;
+  border-radius:999px;
+  background:rgba(30,90,138,.08);
+  font-weight:600;
+}
+
+.content{
+  position:absolute;
+  inset:0;
+  padding:70px 86px 64px 86px;
+}
+
+.kicker{
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  font-size:12px;
+  color:rgba(30,90,138,.9);
+  font-weight:700;
+}
+
+h1{
+  margin:10px 0 8px;
+  font-size:54px;
+  line-height:1.06;
+}
+
+h2{
+  margin:8px 0 10px;
+  font-size:42px;
+}
+
+.sub{
+  font-size:18px;
+  color:var(--muted);
+}
+
+.rule{
+  width:260px;
+  height:4px;
+  background:linear-gradient(90deg,var(--line),var(--accent));
+  border-radius:999px;
+  margin:18px 0 28px;
+}
+
+.media{
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 14px 30px rgba(0,0,0,.14);
+  height:360px;
+  background:#eef2f7;
+}
+
+.media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.card{
+  background:var(--card);
+  padding:22px;
+  border-radius:14px;
+  box-shadow:0 10px 22px rgba(0,0,0,.08);
+}
+
+.card h3{
+  margin:0 0 10px;
+}
+
+.card p{
+  margin:0;
+}
+
+ul.bullets{
+  margin:16px 0 0;
+  padding-left:22px;
+  font-size:20px;
+}
+
+button{
+  position:fixed;
+  bottom:28px;
+  padding:13px 22px;
+  border:none;
+  border-radius:10px;
+  background:rgba(255,255,255,.10);
+  color:#fff;
+  cursor:pointer;
+}
+
+#prev{left:28px}
+#next{right:28px}
+
+</style>
+</head>
+
+<body>
+
+<div class="stage">
+
+<!-- ================================= -->
+<!-- SLIDE TEMPLATE: TITLE -->
+<!-- ================================= -->
+
+<section class="slide active">
+<div class="canvas">
+
+<div class="brand">
+
+<img src="logo.png" alt="Logo">
+
+<!-- 
+Replace logo.png with your logo file
+-->
+
+</div>
+
+<div class="content">
+
+<div class="kicker">
+
+<!-- SECTION LABEL -->
+Example Section
+
+</div>
+
+<h1>
+
+<!-- INSERT TITLE -->
+Presentation Title
+
+</h1>
+
+<p class="sub">
+
+<!-- INSERT SUBTITLE -->
+Short explanation of the presentation
+
+</p>
+
+<div class="rule"></div>
+
+<div class="media">
+
+<img src="image.jpg" alt="Slide Image">
+
+<!--
+
+IMAGE PLACEHOLDER
+
+To change image:
+replace image.jpg
+
+To remove image:
+delete the img line above
+
+-->
+
+</div>
+
+</div>
+
+<div class="footer">
+<div>Organization Name</div>
+<div class="pill">1</div>
+</div>
+
+</div>
+</section>
+
+<!-- ================================= -->
+<!-- SLIDE TEMPLATE: BULLETS -->
+<!-- ================================= -->
+
+<section class="slide">
+<div class="canvas">
+
+<div class="brand">
+
+<img src="logo.png" alt="Logo">
+
+</div>
+
+<div class="content">
+
+<div class="kicker">
+
+<!-- SECTION -->
+Section
+
+</div>
+
+<h2>
+
+<!-- TITLE -->
+Slide Title
+
+</h2>
+
+<p class="sub">
+
+<!-- DESCRIPTION -->
+Optional slide description
+
+</p>
+
+<div class="rule"></div>
+
+<ul class="bullets">
+
+<li><!-- bullet point --></li>
+<li><!-- bullet point --></li>
+<li><!-- bullet point --></li>
+<li><!-- bullet point --></li>
+
+</ul>
+
+</div>
+
+<div class="footer">
+<div>Organization Name</div>
+<div class="pill">2</div>
+</div>
+
+</div>
+</section>
+
+<!-- ================================= -->
+<!-- SLIDE TEMPLATE: GRID CARDS -->
+<!-- ================================= -->
+
+<section class="slide">
+<div class="canvas">
+
+<div class="brand">
+<img src="logo.png">
+</div>
+
+<div class="content">
+
+<div class="kicker">
+
+<!-- SECTION -->
+Section
+
+</div>
+
+<h2>
+
+<!-- TITLE -->
+Three Column Slide
+
+</h2>
+
+<div class="rule"></div>
+
+<div class="grid">
+
+<div class="card">
+
+<h3><!-- CARD TITLE --></h3>
+
+<p><!-- CARD DESCRIPTION --></p>
+
+</div>
+
+<div class="card">
+
+<h3><!-- CARD TITLE --></h3>
+
+<p><!-- CARD DESCRIPTION --></p>
+
+</div>
+
+<div class="card">
+
+<h3><!-- CARD TITLE --></h3>
+
+<p><!-- CARD DESCRIPTION --></p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+<div>Organization Name</div>
+<div class="pill">3</div>
+</div>
+
+</div>
+</section>
+
+</div>
+
+<button id="prev">Previous</button>
+<button id="next">Next</button>
+
+<script>
+
+const slides = Array.from(document.querySelectorAll('.slide'));
+
+let index = 0;
+
+function showSlide(i){
+
+slides.forEach(s => s.classList.remove('active'));
+
+slides[i].classList.add('active');
+
+}
+
+document.getElementById('next').addEventListener('click', () => {
+
+index = (index + 1) % slides.length;
+
+showSlide(index);
+
+});
+
+document.getElementById('prev').addEventListener('click', () => {
+
+index = (index - 1 + slides.length) % slides.length;
+
+showSlide(index);
+
+});
+
+</script>
+
+</body>
+</html>
